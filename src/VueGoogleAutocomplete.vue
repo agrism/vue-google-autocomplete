@@ -20,7 +20,7 @@
         route: 'long_name',
         locality: 'long_name',
         administrative_area_level_1: 'short_name',
-        administrative_area_level_2: 'county',
+        administrative_area_level_2: 'short_name',
 	administrative_area_level_3: 'short_name',
 	administrative_area_level_4: 'short_name',
 	administrative_area_level_5: 'short_name',
