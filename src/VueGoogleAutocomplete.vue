@@ -21,13 +21,18 @@
         locality: 'long_name',
         administrative_area_level_1: 'short_name',
         administrative_area_level_2: 'county',
+	administrative_area_level_3: 'short_name',
+	administrative_area_level_4: 'short_name',
+	administrative_area_level_5: 'short_name',
         country: 'long_name',
         postal_code: 'short_name'
     };
 
     const CITIES_TYPE = ['locality', 'administrative_area_level_3'];
     const REGIONS_TYPE = ['locality', 'sublocality', 'postal_code', 'country',
-        'administrative_area_level_1', 'administrative_area_level_2'];
+        'administrative_area_level_1', 'administrative_area_level_2',
+	'administrative_area_level_3', 'administrative_area_level_4', 
+	'administrative_area_level_5'];
 
     export default {
         name: 'VueGoogleAutocomplete',
