@@ -68,6 +68,10 @@
           geolocationOptions: {
             type: Object,
             default: null
+          },
+		  defaultValue:{
+            type: String,
+            default: ''
           }
         },
 
@@ -120,7 +124,10 @@
               this.autocomplete.setComponentRestrictions({
                 country: this.country === null ? [] : this.country
               });
-            }
+            },
+			defaultValue: function (newVal, oldVal) {
+			  this.autocompleteText = this.defaultValue
+			}
         },
 
         mounted: function() {
@@ -143,7 +150,9 @@
 
           this.autocomplete.addListener('place_changed', this.onPlaceChanged);
         },
-
+        created(){
+			this.autocompleteText = this.defaultValue
+        },
         methods: {
             /**
              * When a place changed
